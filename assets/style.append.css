@@ -1,0 +1,203 @@
+/* ====== LIFECYCLE CANVAS THEME ====== */
+:root{
+  --lc-bg:#d9be9c;              /* areia do fundo */
+  --lc-card:#ffffff;
+  --lc-border:rgba(0,0,0,.08);
+  --lc-muted:#6b7280;
+
+  /* paleta dos blocos (aprox. da imagem) */
+  --tone-just:#2f7d2f;    /* Justificativas */
+  --tone-prod:#a0a1a5;    /* Produto */
+  --tone-partes:#f2c20b;  /* Partes interessadas */
+  --tone-prem:#b33a00;    /* Premissas (cabeçalho vinho) */
+  --tone-riscos:#8b6f54;  /* Riscos */
+
+  --tone-obj:#2f7d2f;     /* Objetivos */
+  --tone-req:#a0a1a5;     /* Requisitos */
+  --tone-equipe:#f2c20b;  /* Equipe */
+  --tone-ent:#c55a12;     /* Entregas */
+  --tone-tempo:#d8a054;   /* Tempo */
+
+  --tone-benef:#2f7d2f;   /* Benefícios */
+  --tone-rest:#a0a1a5;    /* Restrições */
+  --tone-com:#f2c20b;     /* Comunicações */
+  --tone-aq:#7c0d0d;      /* Aquisições (vinho escuro) */
+  --tone-custo:#6f6156;   /* Custo */
+
+  --lc-head:#765475;      /* tarja roxa de seções */
+  --lc-cta:#0b5cff;
+}
+
+body{ background:var(--lc-bg); }
+
+/* container geral do canvas */
+.lc-wrap{ max-width:1200px; }
+
+/* ===== Cabeçalho (linha da logo + cartões) ===== */
+.lc-header{
+  display:grid;
+  grid-template-columns: 220px 1.6fr 0.9fr 1.2fr 0.9fr;
+  gap:14px;
+  margin:14px 0;
+}
+
+.lc-logo{
+  background:var(--lc-card);
+  border-radius:8px;
+  padding:14px;
+  box-shadow:0 1px 0 var(--lc-border);
+  text-align:center;
+}
+.lc-logo-badge{
+  font-weight:800; line-height:1.05;
+  font-size:22px;
+  color:#f48a06;
+}
+.lc-logo-sub{ font-size:12px; color:var(--lc-muted); }
+
+.lc-card{
+  background:var(--lc-card);
+  border-radius:8px;
+  padding:12px;
+  box-shadow:0 1px 0 var(--lc-border);
+}
+.lc-card-title{
+  background:#b798b6;
+  color:#fff;
+  font-weight:700;
+  font-size:13px;
+  padding:6px 8px;
+  border-radius:6px;
+  margin-bottom:10px;
+}
+
+.lc-form label{ display:block; font-size:12px; color:#3a3a3a; margin-bottom:8px; }
+.lc-form input, .lc-form select{
+  width:100%; height:36px;
+  border:1px solid var(--lc-border);
+  border-radius:8px; padding:0 10px;
+  background:#fff;
+}
+
+.lc-legend{ display:flex; gap:14px; padding:2px 0; margin:0; list-style:none; }
+.dot{ display:inline-block; width:14px; height:14px; border-radius:3px; margin-right:6px; vertical-align:-2px; }
+.dot-green{ background:#2e7d32; } .dot-yellow{ background:#f2c20b; } .dot-red{ background:#b00020; }
+
+.lc-ciclo-row{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.lc-meta{ display:grid; grid-template-columns:1fr; gap:8px; }
+
+/* ===== Grade principal ===== */
+.lc-grid{
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap:14px;
+}
+.lc-tile{
+  min-height:180px;
+  background:var(--lc-card);
+  border-radius:8px;
+  box-shadow:0 1px 0 var(--lc-border);
+  display:flex; flex-direction:column;
+}
+.lc-tile-head{
+  display:flex; align-items:center; justify-content:space-between;
+  font-weight:700; color:#fff; font-size:13px;
+  padding:8px 10px; border-radius:8px 8px 0 0;
+}
+.lc-tile-head button{
+  border:0; background:rgba(255,255,255,.85);
+  color:#333; width:24px; height:24px;
+  border-radius:6px; cursor:pointer;
+}
+
+/* tons por bloco */
+.tone-just .lc-tile-head{ background:var(--tone-just); }
+.tone-prod .lc-tile-head{ background:#7b7c7f; }
+.tone-partes .lc-tile-head{ background:#d6a909; }
+.tone-prem .lc-tile-head{ background:#8d2f00; }
+.tone-riscos .lc-tile-head{ background:#6f5944; }
+
+.tone-obj .lc-tile-head{ background:var(--tone-obj); }
+.tone-req .lc-tile-head{ background:#7b7c7f; }
+.tone-equipe .lc-tile-head{ background:#d6a909; }
+.tone-ent .lc-tile-head{ background:#a6490e; }
+.tone-tempo .lc-tile-head{ background:#b6823f; }
+
+.tone-benef .lc-tile-head{ background:var(--tone-benef); }
+.tone-rest .lc-tile-head{ background:#7b7c7f; }
+.tone-com .lc-tile-head{ background:#d6a909; }
+.tone-aq .lc-tile-head{ background:#5c0a0a; }
+.tone-custo .lc-tile-head{ background:#5f5248; }
+
+/* ===== Rodapé de campos ===== */
+.lc-footer{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:14px;
+  margin:14px 0 4px;
+}
+.cardish{
+  background:var(--lc-card);
+  border-radius:8px;
+  box-shadow:0 1px 0 var(--lc-border);
+  padding:10px;
+}
+.lc-foot-title{
+  background:#b798b6; color:#fff; font-weight:700; font-size:13px;
+  padding:6px 8px; border-radius:6px; margin-bottom:8px;
+}
+.cardish input{
+  width:100%; height:36px; border:1px solid var(--lc-border);
+  background:#fff; border-radius:8px; padding:0 10px;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width:1100px){
+  .lc-header{ grid-template-columns: 1fr; }
+  .lc-ciclo-row{ grid-template-columns:1fr; }
+}
+@media (max-width:900px){
+  .lc-grid{ grid-template-columns: repeat(2, 1fr); }
+  .lc-footer{ grid-template-columns: 1fr 1fr; }
+}
+@media (max-width:560px){
+  .lc-grid{ grid-template-columns: 1fr; }
+  .lc-footer{ grid-template-columns: 1fr; }
+}
+
+/* botão padrão herdado */
+button.primary{ background:var(--lc-cta); color:#fff; border:none; border-radius:10px; padding:10px 14px; cursor:pointer; }
+button.primary:hover{ filter:brightness(.95); }
+
+/* Centraliza e dá respiro lateral ao canvas */
+.lc-wrap{
+  max-width: 1200px;
+  margin: 0 auto;          /* <— centraliza */
+  padding: 0 12px;         /* <— respiro nas bordas */
+}
+
+/* Linhas com altura consistente (cada linha fica nivelada) */
+.lc-grid{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  grid-auto-rows: 210px;   /* <— define a altura base da linha */
+}
+.lc-tile{
+  min-height: 0;           /* <— deixa a grid mandar na altura */
+  display: flex; flex-direction: column;
+}
+.lc-tile-body{ overflow: auto; } /* rolagem suave se o conteúdo passar */
+.lc-tile-head button{
+  border:0;
+  background: rgba(255,255,255,.92);
+  color:#222;
+  width:28px; height:28px;
+  border-radius:8px;
+  cursor:pointer;
+  box-shadow: 0 0 0 0 rgba(11,92,255,0);
+  transition: box-shadow .15s ease, transform .05s ease;
+}
+.lc-tile-head button:hover{ transform: translateY(-1px); }
+.lc-tile-head button:focus{ outline: none; box-shadow: 0 0 0 3px rgba(11,92,255,.35); }
+.modal-back{ z-index: 99999; }
