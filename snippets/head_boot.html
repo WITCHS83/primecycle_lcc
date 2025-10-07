@@ -1,0 +1,15 @@
+<!-- THEME BOOT (paste near top of <head>) -->
+<script>
+(function(){
+  try{
+    var KEY='lifecycle.theme';
+    var saved=localStorage.getItem(KEY);
+    if(!saved){
+      saved=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';
+      localStorage.setItem(KEY,saved);
+    }
+    if(saved==='dark'){ document.documentElement.setAttribute('data-theme','dark'); }
+  }catch(e){}
+})();
+</script>
+<link rel="stylesheet" href="/assets/modern.append.css"/>
