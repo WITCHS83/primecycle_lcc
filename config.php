@@ -1,10 +1,10 @@
 <?php
 /* ===== DB ===== */
-$DB_HOST = 'sql313.infinityfree.com';
+$DB_HOST = 'db_lcc.mysql.dbaas.com.br';
 $DB_PORT = 3306;
-$DB_NAME = 'if0_40078277_lifecyclecanvas';
-$DB_USER = 'if0_40078277';
-$DB_PASS = 'nlun81OuNoLMQUU';
+$DB_NAME = 'db_lcc';
+$DB_USER = 'db_lcc';
+$DB_PASS = 'Anderson@1703';
 $DB_CHARSET = 'utf8mb4';
 
 try {
